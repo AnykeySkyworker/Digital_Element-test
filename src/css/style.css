@@ -1,0 +1,20 @@
+.container {
+  font-style: italic; }
+  .container .row {
+    display: flex; }
+
+body {
+  background: brown; }
+  body h1 {
+    color: #3700ff; }
+  body a {
+    color: green; }
+
+#logo circle {
+  fill: green; }
+
+.girl {
+  height: 500px;
+  transform: scale(2); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+.container {
+  font-style: italic;
+  .row {
+    display: flex;
+  } 
+}
+body {
+  background: brown;
+  h1 {
+    color: rgb(55, 0, 255);
+  }
+  a {
+    color: green;
+  }
+}
+#logo circle {
+  fill: green;
+}
+
+.girl {
+  height: 500px;
+  transform: scale(2);
+}
