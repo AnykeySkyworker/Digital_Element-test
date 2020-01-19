@@ -10,23 +10,54 @@ const rigger = require('gulp-rigger');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const svgstore = require('gulp-svgstore');
-// const svgmin = require('gulp-svgmin');
+const svgmin = require('gulp-svgmin');
 const inject = require('gulp-inject');
+const cheerio = require('gulp-cheerio');
+const svgSprite = require('gulp-svg-sprite');
+const include = require('gulp-include')
 
 //------------------------Создаем SVG спарайт------------------------
 function SVG() {
-  const svgs = gulp
-      .src('./src/img/svg/*.svg')
-      .pipe(svgstore({ inlineSvg: true }));
-
-  function fileContents (filePath, file) {
-      return file.contents.toString();
-  }
-  return gulp
-      .src('./src/index.html')
-      .pipe(inject(svgs, { transform: fileContents }))
-      .pipe(gulp.dest('./src'));
+  return gulp.src('./src/img/svg/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+                mode: {
+                  symbol: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(gulp.dest('./src/img/svg'));
 };
+// --------------------------------
+
+function INCLUDE() {
+  return gulp.src('src/index.html')
+        .pipe(include({
+            includePaths: [
+                "src/img/svg"
+            ]
+        }))
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream());
+}
+
+gulp.task('INCLUDE', INCLUDE);
+
+
+// function SVG() {
+//   const svgs = gulp
+//       .src('./src/img/svg/*.svg')
+
+//       .pipe(svgstore({ inlineSvg: true }));
+//         function fileContents (filePath, file) {
+//           return file.contents.toString();
+//         }
+//     return gulp
+//       .src('./src/index.html')
+//       .pipe(inject(svgs, { transform: fileContents }))
+//       .pipe(gulp.dest('./src'));
+// };
 
 //------------------------Таск на компиляцию SCSS------------------
 function sassCompile() {
@@ -104,7 +135,7 @@ function watch() {
   //Следить за JS файлами
   gulp.watch('./src/js/**/*.js', scripts)
   //При изменении HTML запускать синхронизацию
-  gulp.watch('./src/**/*.html', HTML)
+  gulp.watch('./src/**/*.html', INCLUDE)
   // gulp.watch("./src/*.html").on('change', browserSync.reload);
   //Следить за SCSS файлами
   gulp.watch('./src/scss/**/*.scss', sassCompile)
@@ -124,6 +155,6 @@ gulp.task('HTML', HTML);
 //Таск для слежения за файлами и перезагрузки страницы
 gulp.task('watch', watch);
 //Таск для одновременного запуска styles и scripts
-gulp.task('build', gulp.series(SVG, HTML, sassCompile, gulp.parallel(styles, scripts)));
+gulp.task('build', gulp.series(SVG, INCLUDE, sassCompile, gulp.parallel(styles, scripts)));
 //Таск последовательно запускает таски build и  watch
 gulp.task('default', gulp.series('build', 'watch'));

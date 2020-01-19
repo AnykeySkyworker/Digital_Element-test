@@ -3,12 +3,11 @@
   .container .row {
     display: flex; }
 
-body {
-  background: brown; }
-  body h1 {
-    color: #3700ff; }
-  body a {
-    color: green; }
+body h1 {
+  color: #3700ff; }
+
+body a {
+  color: green; }
 
 #logo circle {
   fill: green; }
@@ -16,5 +15,9 @@ body {
 .girl {
   height: 500px;
   transform: scale(2); }
+
+.mainImg {
+  width: 688px;
+  height: 624px; }
 
 /*# sourceMappingURL=style.css.map */

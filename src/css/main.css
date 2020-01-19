@@ -154,10 +154,11 @@
   */
   
   .invisible {
-    visibility: hidden;
+
     height: 0;
     width: 0;
     position: absolute;
+    z-index: -9999;
   }
   
   /*
