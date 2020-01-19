@@ -1,28 +1,6 @@
 .container {
-  font-style: italic;
-  .row {
-    display: flex;
-  } 
+  max-width: 940px;
 }
 body {
-  
-  h1 {
-    color: rgb(55, 0, 255);
-  }
-  a {
-    color: green;
-  }
-}
-#logo circle {
-  fill: green;
-}
-
-.girl {
-  height: 500px;
-  transform: scale(2);
-}
-
-.mainImg {
-  width: 688px;
-  height: 624px;
-}
+  font-family: 'Ubuntu', sans-serif;
+} 

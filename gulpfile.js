@@ -1,6 +1,5 @@
 //Подключаем модули галпа
 const gulp = require('gulp');
-const path = require('path');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -9,10 +8,6 @@ const browserSync = require('browser-sync').create();
 const rigger = require('gulp-rigger');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const svgstore = require('gulp-svgstore');
-const svgmin = require('gulp-svgmin');
-const inject = require('gulp-inject');
-const cheerio = require('gulp-cheerio');
 const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include')
 
@@ -29,7 +24,7 @@ function SVG() {
         ))
         .pipe(gulp.dest('./src/img/svg'));
 };
-// --------------------------------
+// Помещаем SVG спрайт в index.html--------------------------------
 
 function INCLUDE() {
   return gulp.src('src/index.html')
@@ -41,23 +36,6 @@ function INCLUDE() {
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 }
-
-gulp.task('INCLUDE', INCLUDE);
-
-
-// function SVG() {
-//   const svgs = gulp
-//       .src('./src/img/svg/*.svg')
-
-//       .pipe(svgstore({ inlineSvg: true }));
-//         function fileContents (filePath, file) {
-//           return file.contents.toString();
-//         }
-//     return gulp
-//       .src('./src/index.html')
-//       .pipe(inject(svgs, { transform: fileContents }))
-//       .pipe(gulp.dest('./src'));
-// };
 
 //------------------------Таск на компиляцию SCSS------------------
 function sassCompile() {
@@ -144,6 +122,8 @@ function watch() {
 // ------------------------------------------------
 //Таск на SVG спрайт
 gulp.task('SVG', SVG);
+//Таск на установку SVG спрайта в index.html
+gulp.task('INCLUDE', INCLUDE);
 //Таск вызывающий ф-ю styles
 gulp.task('styles', styles);
 //Таск вызывающий ф-ю scripts
