@@ -67,6 +67,7 @@ a {
   .header__menu-img {
     width: 24px;
     height: 16px;
+    cursor: pointer;
     transition-duration: .3s; }
   .header__menu_active {
     width: 24px;
