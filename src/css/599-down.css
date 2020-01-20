@@ -149,7 +149,8 @@ a {
   max-width: 283px;
   padding: 48px;
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-  border-radius: 10px; }
+  border-radius: 10px;
+  background: #fff; }
   .card__img-block {
     position: relative; }
   .card__icons {
