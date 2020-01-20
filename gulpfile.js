@@ -76,7 +76,7 @@ function styles() {
 //------------------------Таск на скрипты JS------------------------
 // Порядок подключения js файлов
 const jsFiles = [
-  './src/js/lib.js',
+  // './src/js/lib.js',
   './src/js/main.js',
 ]
 
@@ -86,7 +86,7 @@ function scripts() {
  //Объединение файлов в один
  .pipe(concat('script.js'))
  //Минификация JS
- .pipe(uglify())
+//  .pipe(uglify())
  //Выходная папка для скриптов
  .pipe(gulp.dest('./dist/js'))
  //Обновляем страницу при изменениях в JS

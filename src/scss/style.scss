@@ -53,10 +53,11 @@ a {
 .header {
   position: relative;
   overflow: visible;
-  padding-top: 40px;
+  padding: 40px 40px 0;
   background: linear-gradient(0deg, rgba(152, 195, 232, .2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
   min-height: 768px;
-  &__top-menu {
+  &__top-bar {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -67,6 +68,37 @@ a {
   &__menu-img {
     width: 24px;
     height: 16px;
+    transition-duration: .3s;
+  }
+  &__menu_active {
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+  &__link-list {
+    position: absolute;
+    right: 100px;
+    top: -2px;
+    display: flex;
+    transition-duration: .3s;
+    li {
+      transition-duration: .3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &_hidden {
+      visibility: hidden;
+      right: 20px;
+      opacity: 0;
+    }
+  }
+  &__list-item {
+    text-transform: uppercase;
+    margin-right: 30px;
+    color: #0a4ca3;
+    font-weight: 500;
   }
   &__text-block {
     margin-top: 101px;
@@ -273,7 +305,7 @@ a {
   }
   &__BG1 {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background: #5A98D0;
     content: "";
@@ -382,3 +414,5 @@ a {
     }
   }
 }
+
+
