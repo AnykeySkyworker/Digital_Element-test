@@ -1,0 +1,51 @@
+h1 {
+  font-size: 51px;
+  line-height: 74px; }
+
+.header {
+  min-height: 768px; }
+  .header__text-block {
+    margin-top: 101px; }
+
+.what-we-do {
+  padding-top: 180px;
+  padding-bottom: 122px; }
+  .what-we-do__container {
+    justify-content: space-between; }
+  .what-we-do__card {
+    margin-left: 90px; }
+
+.our-client {
+  padding: 96px 0 125px;
+  border-radius: 200px 0px 0px 0px; }
+  .our-client h2 {
+    margin-left: 0;
+    width: 25%; }
+  .our-client p {
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 540px; }
+  .our-client__header-text {
+    width: 75%; }
+
+.footer__BG2 {
+  width: calc(100vw - 96px);
+  border-radius: 0px 200px 0px 0px; }
+
+.footer__body {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px; }
+
+.footer__column {
+  width: calc(100% / 3); }
+  .footer__column a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em; }
+    .footer__column a:hover {
+      text-decoration: underline; }
+  .footer__column_first {
+    width: calc(100% / 3); }
+
+/*# sourceMappingURL=1200-up.css.map */

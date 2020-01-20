@@ -1,0 +1,64 @@
+h1 {
+  font-size: 51px;
+  line-height: 74px;
+}
+.header {
+  min-height: 768px;
+  &__text-block {
+    margin-top: 101px;
+  }  
+}
+.what-we-do {
+  padding-top: 180px;
+  padding-bottom: 122px;
+  &__container {
+    justify-content: space-between;
+  }
+  &__card {
+    margin-left: 90px;
+  }
+}
+.our-client {
+  padding: 96px 0 125px;
+  border-radius: 200px 0px 0px 0px;
+    h2 {
+      margin-left: 0;
+      width: 25%;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 540px;
+    }
+  &__header-text {
+    width: 75%;
+  }
+}
+.footer {
+  &__BG2 {
+    width: #{calc(100vw - 96px)};
+    border-radius: 0px 200px 0px 0px;
+  }
+
+
+  &__body {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  &__column {
+    width: #{calc(100% / 3)};
+      a {
+      color: #fff;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    &_first {
+      width: #{calc(100% / 3)};
+    }
+  }
+}

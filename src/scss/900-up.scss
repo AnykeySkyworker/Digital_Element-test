@@ -1,0 +1,130 @@
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
+.header {
+
+  &__link-list {
+    right: 100px;
+    &_hidden {
+      visibility: hidden;
+      right: 20px;
+      opacity: 0;
+    }
+  }
+  &__text-block {
+    margin-top: 80px;
+    p {
+      padding-right: 20%;
+    }
+  }
+}
+.what-we-do {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  &__container {
+     flex-direction: row;
+     align-items: flex-start;
+  }
+  &__h2 {
+    width: 355px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  article:nth-of-type(2){
+        margin-top: -32%;
+      }
+}
+.card {
+  &:hover .card__icons {
+    width: 250px;
+    height: 170px;
+    top: -60px;
+    left: 20px;
+    opacity: 1;
+  }
+  &__icons {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition-duration: .5s;
+  }
+}
+.our-client {
+  padding: 46px 40px 125px;
+  background: #5A98D0;
+  border-radius: 100px 0px 0px 0px;
+
+  &__header-block {
+    display: flex;
+    flex-direction: row;
+    h2 {
+      width: 30%;
+    }
+    p {
+      max-width: 500px;
+      margin-left: 0;
+    }
+  }
+  &__header-text {
+    width: 70%;
+    margin-bottom: 0;
+  }
+  &__client-item {
+    width: #{calc(25% - 1px)};
+    font-size: 20px;
+
+    &:nth-child(3n+3) {
+      border-right: 1px solid #fff;
+    }
+    &:nth-child(-n+6) {
+      border-bottom: none;
+    }
+    &:nth-child(4n+4) {
+      border-right: none;
+    }
+    &:nth-child(-n+4) {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+.footer {
+  padding: 0 40px 64px;
+  &__BG2 {
+    width: #{calc(100vw - 56px)};
+  }
+  &__header {
+    flex-direction: row;
+    width: 100%;
+  }
+  &__head-text {
+    align-self: center;
+  }
+  &__btn-block {
+    margin: 0 auto;
+  }
+  &__column {
+    a {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    
+    &_first {
+      width: 40%;
+      
+    }
+  }
+  &__column-item {
+    margin-bottom: 16px;
+  }
+  &__column_first li{
+    font-size: 16px;
+    &:first-child {
+      margin-bottom: 33px;
+    }
+    
+  }
+}

@@ -1,0 +1,96 @@
+h1 {
+  font-size: 40px;
+  line-height: 60px; }
+
+.header__link-list {
+  right: 100px; }
+  .header__link-list_hidden {
+    visibility: hidden;
+    right: 20px;
+    opacity: 0; }
+
+.header__text-block {
+  margin-top: 80px; }
+  .header__text-block p {
+    padding-right: 20%; }
+
+.what-we-do {
+  padding-top: 140px;
+  padding-bottom: 50px; }
+  .what-we-do__container {
+    flex-direction: row;
+    align-items: flex-start; }
+  .what-we-do__h2 {
+    width: 355px;
+    text-align: left;
+    margin-bottom: 30px; }
+  .what-we-do article:nth-of-type(2) {
+    margin-top: -32%; }
+
+.card:hover .card__icons {
+  width: 250px;
+  height: 170px;
+  top: -60px;
+  left: 20px;
+  opacity: 1; }
+
+.card__icons {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition-duration: .5s; }
+
+.our-client {
+  padding: 46px 40px 125px;
+  background: #5A98D0;
+  border-radius: 100px 0px 0px 0px; }
+  .our-client__header-block {
+    display: flex;
+    flex-direction: row; }
+    .our-client__header-block h2 {
+      width: 30%; }
+    .our-client__header-block p {
+      max-width: 500px;
+      margin-left: 0; }
+  .our-client__header-text {
+    width: 70%;
+    margin-bottom: 0; }
+  .our-client__client-item {
+    width: calc(25% - 1px);
+    font-size: 20px; }
+    .our-client__client-item:nth-child(3n+3) {
+      border-right: 1px solid #fff; }
+    .our-client__client-item:nth-child(-n+6) {
+      border-bottom: none; }
+    .our-client__client-item:nth-child(4n+4) {
+      border-right: none; }
+    .our-client__client-item:nth-child(-n+4) {
+      border-bottom: 1px solid #fff; }
+
+.footer {
+  padding: 0 40px 64px; }
+  .footer__BG2 {
+    width: calc(100vw - 56px); }
+  .footer__header {
+    flex-direction: row;
+    width: 100%; }
+  .footer__head-text {
+    align-self: center; }
+  .footer__btn-block {
+    margin: 0 auto; }
+  .footer__column a {
+    font-size: 16px;
+    line-height: 26px; }
+  .footer__column_first {
+    width: 40%; }
+  .footer__column-item {
+    margin-bottom: 16px; }
+  .footer__column_first li {
+    font-size: 16px; }
+    .footer__column_first li:first-child {
+      margin-bottom: 33px; }
+
+/*# sourceMappingURL=900-up.css.map */
