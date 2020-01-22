@@ -30,7 +30,8 @@ function INCLUDE() {
   return gulp.src('src/index.html')
         .pipe(include({
             includePaths: [
-                "src/img/svg"
+                "src/img/svg",
+                "src"
             ]
         }))
         .pipe(gulp.dest('dist'))
