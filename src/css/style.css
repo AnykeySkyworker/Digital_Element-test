@@ -831,7 +831,8 @@
   overflow-y: scroll;
   background: rgba(0, 132, 255, 0.452);
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  transition-duration: .5s; }
   .popup__form {
     margin: 0 auto; }
   .popup__btn {
@@ -873,5 +874,9 @@
     letter-spacing: 0.04em;
     color: #1F3F68;
     opacity: 0.2; }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */

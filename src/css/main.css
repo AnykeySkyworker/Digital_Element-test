@@ -106,9 +106,13 @@
    * Hide visually and from screen readers
    */
   
-  .hidden {
-    display: none !important;
-  }
+  /* .hidden {
+    
+    top: 50%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  } */
   
   /*
   * Hide only visually, but have it available for screen readers:
