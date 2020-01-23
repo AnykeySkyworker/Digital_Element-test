@@ -873,7 +873,12 @@
     line-height: 30px;
     letter-spacing: 0.04em;
     color: #1F3F68;
-    opacity: 0.2; }
+    outline: none;
+    opacity: 0.5; }
+    .form input:valid, .form textarea:valid {
+      background: rgba(0, 128, 0, 0.3); }
+    .form input:invalid:not(:focus):not(:placeholder-shown), .form textarea:invalid:not(:focus):not(:placeholder-shown) {
+      background: pink; }
 
 .hidden {
   visibility: hidden;

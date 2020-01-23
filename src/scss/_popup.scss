@@ -54,7 +54,17 @@
     line-height: 30px;
     letter-spacing: 0.04em;
     color: #1F3F68;
-    opacity: 0.2;
+    outline: none;
+    opacity: 0.5;
+    &:valid {
+      background: rgba(0, 128, 0, 0.3);
+    }
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      background: pink;
+    }
+    // &:invalid:not(:placeholder-shown) {
+    //   background: pink;
+    // }
   }
 }
 
