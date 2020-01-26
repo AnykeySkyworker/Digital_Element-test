@@ -25,7 +25,7 @@ popupBtn.addEventListener('click', () => {
         e.preventDefault();
         let form = new Form('name', 'phone', 'email', 'message');
         form.validate('name', 'phone', 'email', 'message');
-        document.querySelector('.popup__btn_for-popup').removeEventListener()
+        // document.querySelector('.popup__btn_for-popup').removeEventListener('click')
       })
 });
 
