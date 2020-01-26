@@ -77,7 +77,10 @@ function styles() {
 //------------------------Таск на скрипты JS------------------------
 // Порядок подключения js файлов
 const jsFiles = [
-  // './src/js/lib.js',
+  // './src/js/modules/_InputData.js',
+  // './src/js/modules/_CheckError.js',
+  // './src/js/modules/_AJAXsender.js',
+  // './src/js/modules/_Form.js',
   './src/js/main.js',
 ]
 
